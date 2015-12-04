@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE3EC8F81C10C94900D2CF04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EC8F71C10C94900D2CF04 /* AppDelegate.swift */; };
+		DE3EC8FD1C10C94900D2CF04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3EC8FB1C10C94900D2CF04 /* Main.storyboard */; };
+		DE3EC8FF1C10C94900D2CF04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3EC8FE1C10C94900D2CF04 /* Images.xcassets */; };
+		DE3EC9021C10C94900D2CF04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE3EC9001C10C94900D2CF04 /* LaunchScreen.xib */; };
+		DE3EC90E1C10C94900D2CF04 /* RemoteTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EC90D1C10C94900D2CF04 /* RemoteTableViewTests.swift */; };
+		DE3EC9181C10CA0500D2CF04 /* ContriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EC9171C10CA0500D2CF04 /* ContriesViewController.swift */; };
+		DE3EC91C1C10CB7700D2CF04 /* Contry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EC91B1C10CB7700D2CF04 /* Contry.swift */; };
+		DE3EC91E1C10CC7800D2CF04 /* RemoteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EC91D1C10CC7800D2CF04 /* RemoteApi.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE3EC9081C10C94900D2CF04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE3EC8EA1C10C94900D2CF04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE3EC8F11C10C94900D2CF04;
+			remoteInfo = RemoteTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE3EC8F21C10C94900D2CF04 /* RemoteTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3EC8F61C10C94900D2CF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3EC8F71C10C94900D2CF04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE3EC8FC1C10C94900D2CF04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE3EC8FE1C10C94900D2CF04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DE3EC9011C10C94900D2CF04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DE3EC9071C10C94900D2CF04 /* RemoteTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3EC90C1C10C94900D2CF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3EC90D1C10C94900D2CF04 /* RemoteTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTableViewTests.swift; sourceTree = "<group>"; };
+		DE3EC9171C10CA0500D2CF04 /* ContriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContriesViewController.swift; sourceTree = "<group>"; };
+		DE3EC91B1C10CB7700D2CF04 /* Contry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contry.swift; sourceTree = "<group>"; };
+		DE3EC91D1C10CC7800D2CF04 /* RemoteApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteApi.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE3EC8EF1C10C94900D2CF04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3EC9041C10C94900D2CF04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE3EC8E91C10C94900D2CF04 = {
+			isa = PBXGroup;
+			children = (
+				DE3EC8F41C10C94900D2CF04 /* RemoteTableView */,
+				DE3EC90A1C10C94900D2CF04 /* RemoteTableViewTests */,
+				DE3EC8F31C10C94900D2CF04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE3EC8F31C10C94900D2CF04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EC8F21C10C94900D2CF04 /* RemoteTableView.app */,
+				DE3EC9071C10C94900D2CF04 /* RemoteTableViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE3EC8F41C10C94900D2CF04 /* RemoteTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EC91B1C10CB7700D2CF04 /* Contry.swift */,
+				DE3EC8F71C10C94900D2CF04 /* AppDelegate.swift */,
+				DE3EC8FB1C10C94900D2CF04 /* Main.storyboard */,
+				DE3EC8FE1C10C94900D2CF04 /* Images.xcassets */,
+				DE3EC9001C10C94900D2CF04 /* LaunchScreen.xib */,
+				DE3EC8F51C10C94900D2CF04 /* Supporting Files */,
+				DE3EC9171C10CA0500D2CF04 /* ContriesViewController.swift */,
+				DE3EC91D1C10CC7800D2CF04 /* RemoteApi.swift */,
+			);
+			path = RemoteTableView;
+			sourceTree = "<group>";
+		};
+		DE3EC8F51C10C94900D2CF04 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EC8F61C10C94900D2CF04 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE3EC90A1C10C94900D2CF04 /* RemoteTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EC90D1C10C94900D2CF04 /* RemoteTableViewTests.swift */,
+				DE3EC90B1C10C94900D2CF04 /* Supporting Files */,
+			);
+			path = RemoteTableViewTests;
+			sourceTree = "<group>";
+		};
+		DE3EC90B1C10C94900D2CF04 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE3EC90C1C10C94900D2CF04 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE3EC8F11C10C94900D2CF04 /* RemoteTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3EC9111C10C94900D2CF04 /* Build configuration list for PBXNativeTarget "RemoteTableView" */;
+			buildPhases = (
+				DE3EC8EE1C10C94900D2CF04 /* Sources */,
+				DE3EC8EF1C10C94900D2CF04 /* Frameworks */,
+				DE3EC8F01C10C94900D2CF04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteTableView;
+			productName = RemoteTableView;
+			productReference = DE3EC8F21C10C94900D2CF04 /* RemoteTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE3EC9061C10C94900D2CF04 /* RemoteTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3EC9141C10C94900D2CF04 /* Build configuration list for PBXNativeTarget "RemoteTableViewTests" */;
+			buildPhases = (
+				DE3EC9031C10C94900D2CF04 /* Sources */,
+				DE3EC9041C10C94900D2CF04 /* Frameworks */,
+				DE3EC9051C10C94900D2CF04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE3EC9091C10C94900D2CF04 /* PBXTargetDependency */,
+			);
+			name = RemoteTableViewTests;
+			productName = RemoteTableViewTests;
+			productReference = DE3EC9071C10C94900D2CF04 /* RemoteTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE3EC8EA1C10C94900D2CF04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Shoulong Li";
+				TargetAttributes = {
+					DE3EC8F11C10C94900D2CF04 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					DE3EC9061C10C94900D2CF04 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = DE3EC8F11C10C94900D2CF04;
+					};
+				};
+			};
+			buildConfigurationList = DE3EC8ED1C10C94900D2CF04 /* Build configuration list for PBXProject "RemoteTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE3EC8E91C10C94900D2CF04;
+			productRefGroup = DE3EC8F31C10C94900D2CF04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE3EC8F11C10C94900D2CF04 /* RemoteTableView */,
+				DE3EC9061C10C94900D2CF04 /* RemoteTableViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE3EC8F01C10C94900D2CF04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3EC8FD1C10C94900D2CF04 /* Main.storyboard in Resources */,
+				DE3EC9021C10C94900D2CF04 /* LaunchScreen.xib in Resources */,
+				DE3EC8FF1C10C94900D2CF04 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3EC9051C10C94900D2CF04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE3EC8EE1C10C94900D2CF04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3EC91E1C10CC7800D2CF04 /* RemoteApi.swift in Sources */,
+				DE3EC91C1C10CB7700D2CF04 /* Contry.swift in Sources */,
+				DE3EC8F81C10C94900D2CF04 /* AppDelegate.swift in Sources */,
+				DE3EC9181C10CA0500D2CF04 /* ContriesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3EC9031C10C94900D2CF04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3EC90E1C10C94900D2CF04 /* RemoteTableViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE3EC9091C10C94900D2CF04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE3EC8F11C10C94900D2CF04 /* RemoteTableView */;
+			targetProxy = DE3EC9081C10C94900D2CF04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE3EC8FB1C10C94900D2CF04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE3EC8FC1C10C94900D2CF04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE3EC9001C10C94900D2CF04 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE3EC9011C10C94900D2CF04 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE3EC90F1C10C94900D2CF04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE3EC9101C10C94900D2CF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE3EC9121C10C94900D2CF04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RemoteTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE3EC9131C10C94900D2CF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RemoteTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DE3EC9151C10C94900D2CF04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RemoteTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemoteTableView.app/RemoteTableView";
+			};
+			name = Debug;
+		};
+		DE3EC9161C10C94900D2CF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RemoteTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemoteTableView.app/RemoteTableView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE3EC8ED1C10C94900D2CF04 /* Build configuration list for PBXProject "RemoteTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3EC90F1C10C94900D2CF04 /* Debug */,
+				DE3EC9101C10C94900D2CF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE3EC9111C10C94900D2CF04 /* Build configuration list for PBXNativeTarget "RemoteTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3EC9121C10C94900D2CF04 /* Debug */,
+				DE3EC9131C10C94900D2CF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DE3EC9141C10C94900D2CF04 /* Build configuration list for PBXNativeTarget "RemoteTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3EC9151C10C94900D2CF04 /* Debug */,
+				DE3EC9161C10C94900D2CF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE3EC8EA1C10C94900D2CF04 /* Project object */;
+}
