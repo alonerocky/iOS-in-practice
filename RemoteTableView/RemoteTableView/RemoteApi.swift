@@ -10,11 +10,11 @@ import Foundation
 
 class RemoteApi {
     
-    func fetchData(urlPath: String, completeHandler: (NSData) -> Void, errorHandler: ((NSError)! -> Void)?) {
+    func fetchData(urlPath: String, completeHandler: (NSData?) -> Void, errorHandler: ((NSError)! -> Void)?) {
         let url = NSURL(string: urlPath)
         let session = NSURLSession.sharedSession()
         let handler = {
-            (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+            (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             if error == nil {
                 completeHandler(data)
             }

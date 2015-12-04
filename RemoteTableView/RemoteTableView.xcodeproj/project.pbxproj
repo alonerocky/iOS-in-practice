@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15CAE7321C11795500842BA8 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAE7311C11795500842BA8 /* Country.swift */; };
 		DE3EC8F81C10C94900D2CF04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EC8F71C10C94900D2CF04 /* AppDelegate.swift */; };
 		DE3EC8FD1C10C94900D2CF04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3EC8FB1C10C94900D2CF04 /* Main.storyboard */; };
 		DE3EC8FF1C10C94900D2CF04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3EC8FE1C10C94900D2CF04 /* Images.xcassets */; };
 		DE3EC9021C10C94900D2CF04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE3EC9001C10C94900D2CF04 /* LaunchScreen.xib */; };
 		DE3EC90E1C10C94900D2CF04 /* RemoteTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EC90D1C10C94900D2CF04 /* RemoteTableViewTests.swift */; };
 		DE3EC9181C10CA0500D2CF04 /* ContriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EC9171C10CA0500D2CF04 /* ContriesViewController.swift */; };
-		DE3EC91C1C10CB7700D2CF04 /* Contry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EC91B1C10CB7700D2CF04 /* Contry.swift */; };
 		DE3EC91E1C10CC7800D2CF04 /* RemoteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3EC91D1C10CC7800D2CF04 /* RemoteApi.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15CAE7311C11795500842BA8 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		DE3EC8F21C10C94900D2CF04 /* RemoteTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3EC8F61C10C94900D2CF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE3EC8F71C10C94900D2CF04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		DE3EC90C1C10C94900D2CF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE3EC90D1C10C94900D2CF04 /* RemoteTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTableViewTests.swift; sourceTree = "<group>"; };
 		DE3EC9171C10CA0500D2CF04 /* ContriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContriesViewController.swift; sourceTree = "<group>"; };
-		DE3EC91B1C10CB7700D2CF04 /* Contry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contry.swift; sourceTree = "<group>"; };
 		DE3EC91D1C10CC7800D2CF04 /* RemoteApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +81,7 @@
 		DE3EC8F41C10C94900D2CF04 /* RemoteTableView */ = {
 			isa = PBXGroup;
 			children = (
-				DE3EC91B1C10CB7700D2CF04 /* Contry.swift */,
+				15CAE7311C11795500842BA8 /* Country.swift */,
 				DE3EC8F71C10C94900D2CF04 /* AppDelegate.swift */,
 				DE3EC8FB1C10C94900D2CF04 /* Main.storyboard */,
 				DE3EC8FE1C10C94900D2CF04 /* Images.xcassets */,
@@ -162,6 +162,8 @@
 		DE3EC8EA1C10C94900D2CF04 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Shoulong Li";
 				TargetAttributes = {
@@ -219,8 +221,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE3EC91E1C10CC7800D2CF04 /* RemoteApi.swift in Sources */,
-				DE3EC91C1C10CB7700D2CF04 /* Contry.swift in Sources */,
 				DE3EC8F81C10C94900D2CF04 /* AppDelegate.swift in Sources */,
+				15CAE7321C11795500842BA8 /* Country.swift in Sources */,
 				DE3EC9181C10CA0500D2CF04 /* ContriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +415,7 @@
 				DE3EC9131C10C94900D2CF04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE3EC9141C10C94900D2CF04 /* Build configuration list for PBXNativeTarget "RemoteTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +424,7 @@
 				DE3EC9161C10C94900D2CF04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

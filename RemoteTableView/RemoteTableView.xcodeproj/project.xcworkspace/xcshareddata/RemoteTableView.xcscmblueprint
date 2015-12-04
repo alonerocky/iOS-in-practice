@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D69CEAB75B1897690D08FEFDB243456AB9113659",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "798194898A36B5042C25C9E9B6956B703DD91C2B" : 0,
+    "D69CEAB75B1897690D08FEFDB243456AB9113659" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8A02E7E2-90D1-4058-96B7-9D76482510BB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "798194898A36B5042C25C9E9B6956B703DD91C2B" : "swift-in-practice",
+    "D69CEAB75B1897690D08FEFDB243456AB9113659" : "iOS-in-practice\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RemoteTableView",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RemoteTableView\/RemoteTableView.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alonerocky\/swift-in-practice.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "798194898A36B5042C25C9E9B6956B703DD91C2B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alonerocky\/iOS-in-practice.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D69CEAB75B1897690D08FEFDB243456AB9113659"
+    }
+  ]
+}
