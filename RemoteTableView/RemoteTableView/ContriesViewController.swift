@@ -73,8 +73,8 @@ class ContriesViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("countryItemCell", forIndexPath: indexPath) as UITableViewCell
-        cell.st
+        let cell = tableView.dequeueReusableCellWithIdentifier("countryItemCell", forIndexPath: indexPath) as UITableViewCell;
+        
         cell.textLabel?.text = countryList[indexPath.row].countryName
         cell.detailTextLabel?.text = countryList[indexPath.row].countryCode
         // Configure the cell...
@@ -82,6 +82,13 @@ class ContriesViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let item = countryList[indexPath.row]
+        
+        let detailVc = CountryDetailViewController(country: item, nibName: "CountryDetailViewController", bundle: nil)
+        showViewController(detailVc, sender: self)
+        //showDetailViewController(<#T##vc: UIViewController##UIViewController#>, sender: <#T##AnyObject?#>)
+    }
     
     /*
     // Override to support conditional editing of the table view.
