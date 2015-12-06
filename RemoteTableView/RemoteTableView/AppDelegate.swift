@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let rootVc = ContriesViewController()
+        let rootVc = ContriesViewController(nibName: nil, bundle: nil)
         let nvc = UINavigationController(rootViewController: rootVc)
         window!.rootViewController = nvc
         return true

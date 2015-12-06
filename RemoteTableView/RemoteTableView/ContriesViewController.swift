@@ -13,6 +13,17 @@ class ContriesViewController: UITableViewController {
     let url: String = "http://www.kaleidosblog.com/tutorial/tutorial.json"
     var countryList: [Country] = []
     var api: RemoteApi = RemoteApi()
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        navigationItem.title = "Country List"
+        navigationItem.leftBarButtonItem = editButtonItem()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -88,6 +99,26 @@ class ContriesViewController: UITableViewController {
         let detailVc = CountryDetailViewController(country: item, nibName: "CountryDetailViewController", bundle: nil)
         showViewController(detailVc, sender: self)
         //showDetailViewController(<#T##vc: UIViewController##UIViewController#>, sender: <#T##AnyObject?#>)
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            countryList.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
+    
+    //move row
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        let fromIndex = sourceIndexPath.row
+        let toIndex = destinationIndexPath.row
+        if fromIndex == toIndex {
+            return
+        }
+        
+        let movedItem = countryList[fromIndex]
+        countryList.removeAtIndex(fromIndex)
+        countryList.insert(movedItem, atIndex: toIndex)
     }
     
     /*

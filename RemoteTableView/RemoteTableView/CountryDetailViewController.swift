@@ -14,9 +14,9 @@ class CountryDetailViewController: UIViewController {
     @IBOutlet weak var countryCodeLabel: UILabel!
     
     var country: Country?
-    init(country: Country?, nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    init(country: Country?, nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.country = country
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        navigationItem.title = country?.countryName
     }
     
     required init?(coder aDecoder: NSCoder) {
