@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15CAE8031C169F1800842BA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAE8021C169F1800842BA8 /* AppDelegate.swift */; };
+		15CAE8081C169F1800842BA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15CAE8061C169F1800842BA8 /* Main.storyboard */; };
+		15CAE80A1C169F1800842BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CAE8091C169F1800842BA8 /* Assets.xcassets */; };
+		15CAE80D1C169F1800842BA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15CAE80B1C169F1800842BA8 /* LaunchScreen.storyboard */; };
+		15CAE8171C169F3300842BA8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CAE8141C169F3300842BA8 /* FBSDKCoreKit.framework */; };
+		15CAE8181C169F3300842BA8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CAE8151C169F3300842BA8 /* FBSDKLoginKit.framework */; };
+		15CAE8191C169F3300842BA8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CAE8161C169F3300842BA8 /* FBSDKShareKit.framework */; };
+		15CAE81B1C16AF4300842BA8 /* PhotoAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAE81A1C16AF4300842BA8 /* PhotoAlbumsViewController.swift */; };
+		15CAE81D1C16B05700842BA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAE81C1C16B05700842BA8 /* LoginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15CAE7FF1C169F1800842BA8 /* Photo Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Albums.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15CAE8021C169F1800842BA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15CAE8071C169F1800842BA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15CAE8091C169F1800842BA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15CAE80C1C169F1800842BA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15CAE80E1C169F1800842BA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15CAE8141C169F3300842BA8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		15CAE8151C169F3300842BA8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		15CAE8161C169F3300842BA8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		15CAE81A1C16AF4300842BA8 /* PhotoAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumsViewController.swift; sourceTree = "<group>"; };
+		15CAE81C1C16B05700842BA8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15CAE7FC1C169F1800842BA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15CAE8181C169F3300842BA8 /* FBSDKLoginKit.framework in Frameworks */,
+				15CAE8171C169F3300842BA8 /* FBSDKCoreKit.framework in Frameworks */,
+				15CAE8191C169F3300842BA8 /* FBSDKShareKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15CAE7F61C169F1800842BA8 = {
+			isa = PBXGroup;
+			children = (
+				15CAE8141C169F3300842BA8 /* FBSDKCoreKit.framework */,
+				15CAE8151C169F3300842BA8 /* FBSDKLoginKit.framework */,
+				15CAE8161C169F3300842BA8 /* FBSDKShareKit.framework */,
+				15CAE8011C169F1800842BA8 /* Photo Albums */,
+				15CAE8001C169F1800842BA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15CAE8001C169F1800842BA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15CAE7FF1C169F1800842BA8 /* Photo Albums.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15CAE8011C169F1800842BA8 /* Photo Albums */ = {
+			isa = PBXGroup;
+			children = (
+				15CAE81C1C16B05700842BA8 /* LoginViewController.swift */,
+				15CAE8021C169F1800842BA8 /* AppDelegate.swift */,
+				15CAE8061C169F1800842BA8 /* Main.storyboard */,
+				15CAE8091C169F1800842BA8 /* Assets.xcassets */,
+				15CAE80B1C169F1800842BA8 /* LaunchScreen.storyboard */,
+				15CAE80E1C169F1800842BA8 /* Info.plist */,
+				15CAE81A1C16AF4300842BA8 /* PhotoAlbumsViewController.swift */,
+			);
+			path = "Photo Albums";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15CAE7FE1C169F1800842BA8 /* Photo Albums */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15CAE8111C169F1800842BA8 /* Build configuration list for PBXNativeTarget "Photo Albums" */;
+			buildPhases = (
+				15CAE7FB1C169F1800842BA8 /* Sources */,
+				15CAE7FC1C169F1800842BA8 /* Frameworks */,
+				15CAE7FD1C169F1800842BA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Photo Albums";
+			productName = "Photo Albums";
+			productReference = 15CAE7FF1C169F1800842BA8 /* Photo Albums.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15CAE7F71C169F1800842BA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "shoulong li";
+				TargetAttributes = {
+					15CAE7FE1C169F1800842BA8 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 15CAE7FA1C169F1800842BA8 /* Build configuration list for PBXProject "Photo Albums" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15CAE7F61C169F1800842BA8;
+			productRefGroup = 15CAE8001C169F1800842BA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15CAE7FE1C169F1800842BA8 /* Photo Albums */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15CAE7FD1C169F1800842BA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15CAE80D1C169F1800842BA8 /* LaunchScreen.storyboard in Resources */,
+				15CAE80A1C169F1800842BA8 /* Assets.xcassets in Resources */,
+				15CAE8081C169F1800842BA8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15CAE7FB1C169F1800842BA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15CAE81D1C16B05700842BA8 /* LoginViewController.swift in Sources */,
+				15CAE8031C169F1800842BA8 /* AppDelegate.swift in Sources */,
+				15CAE81B1C16AF4300842BA8 /* PhotoAlbumsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		15CAE8061C169F1800842BA8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15CAE8071C169F1800842BA8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15CAE80B1C169F1800842BA8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15CAE80C1C169F1800842BA8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15CAE80F1C169F1800842BA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15CAE8101C169F1800842BA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15CAE8121C169F1800842BA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = /Users/shoulongli/Documents/FacebookSDK;
+				INFOPLIST_FILE = "Photo Albums/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shoulongli.Photo-Albums";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		15CAE8131C169F1800842BA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = /Users/shoulongli/Documents/FacebookSDK;
+				INFOPLIST_FILE = "Photo Albums/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shoulongli.Photo-Albums";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15CAE7FA1C169F1800842BA8 /* Build configuration list for PBXProject "Photo Albums" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15CAE80F1C169F1800842BA8 /* Debug */,
+				15CAE8101C169F1800842BA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15CAE8111C169F1800842BA8 /* Build configuration list for PBXNativeTarget "Photo Albums" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15CAE8121C169F1800842BA8 /* Debug */,
+				15CAE8131C169F1800842BA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15CAE7F71C169F1800842BA8 /* Project object */;
+}
