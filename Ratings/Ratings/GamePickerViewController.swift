@@ -18,6 +18,15 @@ class GamePickerViewController: UITableViewController {
         "Texas Hold'em Poker",
         "Tic-Tac-Toe"]
     
+    var selectedGame: String? {
+        didSet {
+            if let game = selectedGame {
+                selectedGameIndex = games.indexOf(game)
+            }
+        }
+    }
+    var selectedGameIndex: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,11 +60,28 @@ class GamePickerViewController: UITableViewController {
         cell.textLabel?.text = games[indexPath.row]
         // Configure the cell...
 
+        if indexPath.row == selectedGameIndex {
+            cell.accessoryType = .Checkmark
+        } else {
+            cell.accessoryType = .None
+        }
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        
+        if let index = selectedGameIndex {
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0))
+            cell?.accessoryType = .None
+        }
+        
+        selectedGame = games[indexPath.row]
+        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: indexPath.row, inSection: 0))
+        cell?.accessoryType = .Checkmark
+        
     }
 
     /*
@@ -93,14 +119,23 @@ class GamePickerViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "SaveSelectedGame" {
+            if let cell = sender as? UITableViewCell {
+                let indexPath = tableView.indexPathForCell(cell)
+                if let index = indexPath?.row {
+                    selectedGame = games[index]
+                }
+            }
+        }
     }
-    */
+    
 
 }

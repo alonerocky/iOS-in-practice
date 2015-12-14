@@ -11,8 +11,21 @@ import UIKit
 class PlayerDetailViewController: UITableViewController {
 
     var player: Player?
+    var game: String = "Chess" {
+        didSet {
+            detailLabel.text = game
+        }
+    }
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var detailLabel: UILabel!
+    
+    @IBAction func gameSelected(segue: UIStoryboardSegue) {
+        if let gamePickerViewController = segue.sourceViewController as? GamePickerViewController {
+            if let selected = gamePickerViewController.selectedGame {
+                game = selected
+            }
+        }
+    }
     
     required init?(coder aDecoder: NSCoder) {
         print("init PlayerDetailsViewController")
@@ -99,9 +112,16 @@ class PlayerDetailViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "SavePlayerDetail" {
-            player = Player(name: nameTextField.text, game: "chess", rating: 1)
+            player = Player(name: nameTextField.text, game: game, rating: 1)
+        } else if segue.identifier == "PickGame" {
+            if let gamePickerViewController = segue.destinationViewController as? GamePickerViewController {
+                gamePickerViewController.selectedGame = game
+            }
         }
     }
+    
+    
+    
     
 
 }
