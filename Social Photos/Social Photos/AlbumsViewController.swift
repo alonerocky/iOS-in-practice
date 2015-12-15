@@ -12,6 +12,8 @@ import FBSDKShareKit
 
 class AlbumsViewController: UITableViewController {
     
+    var graphApi: GraphApi = GraphApi()
+    var albums: [Album] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +22,15 @@ class AlbumsViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        fetchAlbum()
+        graphApi.fetchAlbums(albumsHandler)
+    }
+    
+    func albumsHandler(albums: [Album]) {
+        self.albums = albums
+        //print("\(self.albums)")
+        dispatch_async(dispatch_get_main_queue(), {
+            self.tableView.reloadData()
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,23 +42,24 @@ class AlbumsViewController: UITableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return albums.count
     }
     
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    let cell = tableView.dequeueReusableCellWithIdentifier("albumReuseIdentifier", forIndexPath: indexPath)
     
     // Configure the cell...
+    cell.textLabel?.text = albums[indexPath.row].name
     
     return cell
     }
-    */
+    
     
     /*
     // Override to support conditional editing of the table view.
@@ -93,23 +104,4 @@ class AlbumsViewController: UITableViewController {
     // Get the new view controller using segue.destinationViewController.
     // Pass the selected object to the new view controller.
     }
-    */
-    
-    func fetchAlbum(){
-        
-        let request =  FBSDKGraphRequest(graphPath: "me/albums", parameters: nil)
-        
-        //        let handler = FBSDKGraphRequestHandler()
-        //(FBSDKGraphRequestConnection!, AnyObject!, NSError!) -> Void
-        
-        request.startWithCompletionHandler({
-            (connection: FBSDKGraphRequestConnection!, result: AnyObject!, error: NSError!) in
-            
-            if error != nil {
-                print(error.localizedDescription)
-            } else {
-                print("\(result)")
-            }
-        });
-    }
-}
+    */}
