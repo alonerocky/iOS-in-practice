@@ -1,13 +1,12 @@
 //
 //  ViewController.swift
-//  Facebook Albums
+//  Social Photos
 //
-//  Created by shoulong li on 12/7/15.
+//  Created by shoulong li on 12/14/15.
 //  Copyright © 2015 shoulong li. All rights reserved.
 //
 
 import UIKit
-
 
 class ViewController: UIViewController {
 

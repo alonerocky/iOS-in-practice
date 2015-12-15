@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Swift FaceBook Signin.xcscheme</key>
+		<key>Social Photos.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>15CAE7B91C1414F000842BA8</key>
+		<key>152975091C1FEF0800C6EFA4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
