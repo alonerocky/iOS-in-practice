@@ -20,6 +20,16 @@ class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.readPermissions = ["public_profile", "email", "user_photos", "user_videos"]
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if FBSDKAccessToken.currentAccessToken() != nil {
+            launchHome()
+        }
+        
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,7 +43,7 @@ class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         } else {
             print("permissions: \(result.grantedPermissions)")
             if result.grantedPermissions.contains("user_photos") {
-                
+                launchHome()
             }
         }
     }
@@ -42,7 +52,12 @@ class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         print("user is logged out")
     }
     
-    
+    func launchHome() {
+        let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController") as! UITabBarController
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.window!.rootViewController = homeViewController
+    }
     
     /*
     // MARK: - Navigation
