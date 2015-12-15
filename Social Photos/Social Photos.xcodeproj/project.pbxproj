@@ -16,6 +16,7 @@
 		152975241C1FF0DE00C6EFA4 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152975211C1FF0DE00C6EFA4 /* FBSDKShareKit.framework */; };
 		152975271C1FF94900C6EFA4 /* FBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975261C1FF94900C6EFA4 /* FBLoginViewController.swift */; };
 		152975291C1FFFCA00C6EFA4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975281C1FFFCA00C6EFA4 /* SettingsViewController.swift */; };
+		1529752D1C2008D500C6EFA4 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529752C1C2008D500C6EFA4 /* AlbumsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		152975211C1FF0DE00C6EFA4 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		152975261C1FF94900C6EFA4 /* FBLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoginViewController.swift; sourceTree = "<group>"; };
 		152975281C1FFFCA00C6EFA4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1529752C1C2008D500C6EFA4 /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				152975191C1FEF0800C6EFA4 /* Info.plist */,
 				152975261C1FF94900C6EFA4 /* FBLoginViewController.swift */,
 				152975281C1FFFCA00C6EFA4 /* SettingsViewController.swift */,
+				1529752C1C2008D500C6EFA4 /* AlbumsViewController.swift */,
 			);
 			path = "Social Photos";
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				1529750E1C1FEF0800C6EFA4 /* AppDelegate.swift in Sources */,
 				152975271C1FF94900C6EFA4 /* FBLoginViewController.swift in Sources */,
 				152975291C1FFFCA00C6EFA4 /* SettingsViewController.swift in Sources */,
+				1529752D1C2008D500C6EFA4 /* AlbumsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
