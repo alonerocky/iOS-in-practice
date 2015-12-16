@@ -12,7 +12,9 @@ import FBSDKShareKit
 
 class GraphApi {
     
-    let ALBUMS_PARAMETERS = ["fields": "id, name, count, can_update, cover_photo, created_time, description, link, location, privacy, type, updated_time, from, place"]
+    let ALBUMS_PARAMETERS = ["fields": "id, name, count, cover_photo, created_time, description, location, type, from"]
+    
+    let PHOTO_PARAMETERS = ["fields": "id, name, created_time, picture"]
     
     //albums
     func fetchAlbums(handler: ([Album] -> Void)) {
@@ -56,4 +58,17 @@ class GraphApi {
         
         return true
     }
+    
+    func fetchPhotos(albumid: String) {
+        let request =  FBSDKGraphRequest(graphPath: "\(albumid)/photos", parameters: PHOTO_PARAMETERS)
+        request.startWithCompletionHandler({(connection: FBSDKGraphRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
+            if error != nil {
+                
+            } else {
+                print("\(result)")
+            }
+        
+        })
+    }
+    
 }
