@@ -13,6 +13,7 @@ private let reuseIdentifier = "Cell"
 class AlbumCollectionViewController: UICollectionViewController {
 
     var graphApi: GraphApi = GraphApi()
+    var album: Album?
     var photos: [Photo] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,11 @@ class AlbumCollectionViewController: UICollectionViewController {
         // Register cell classes
         self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        
-        graphApi.fetchPhotos("4142783895126", handler: photosHandler)
+        if let currentAlbum = album {
+            if let albumId = currentAlbum.id {
+                graphApi.fetchPhotos(albumId, handler: photosHandler)
+            }
+        }
         // Do any additional setup after loading the view.
     }
     

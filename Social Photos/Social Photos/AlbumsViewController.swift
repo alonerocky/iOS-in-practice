@@ -14,6 +14,7 @@ class AlbumsViewController: UITableViewController {
     
     var graphApi: GraphApi = GraphApi()
     var albums: [Album] = []
+    var selectedAlbum: Album?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +62,11 @@ class AlbumsViewController: UITableViewController {
     return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        selectedAlbum = albums[indexPath.row]
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.
@@ -97,12 +103,15 @@ class AlbumsViewController: UITableViewController {
     }
     */
     
-    /*
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using segue.destinationViewController.
     // Pass the selected object to the new view controller.
+        if let viewController = segue.destinationViewController as? AlbumCollectionViewController {
+            viewController.album = selectedAlbum
+        }
     }
-    */}
+    }

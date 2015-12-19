@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Social Photos/AlbumsViewController.swift"
-            timestampString = "471957306.830437"
+            timestampString = "472202286.477555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "albumsHandler(_:)"
             landmarkType = "5">
          </BreakpointContent>
