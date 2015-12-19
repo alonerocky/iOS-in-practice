@@ -43,7 +43,7 @@ class GraphApi {
                     //print(albumJson)
                     var album = Album(id: albumJson["id"] as? String, name: albumJson["name"] as? String, count: albumJson["count"] as? Int)
                     albums.append(album)
-                    print(album)
+                    //print(album)
                 }
             }
             
@@ -59,16 +59,38 @@ class GraphApi {
         return true
     }
     
-    func fetchPhotos(albumid: String) {
+    func fetchPhotos(albumid: String, handler: ([Photo] -> Void)) {
         let request =  FBSDKGraphRequest(graphPath: "\(albumid)/photos", parameters: PHOTO_PARAMETERS)
         request.startWithCompletionHandler({(connection: FBSDKGraphRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
             if error != nil {
                 
             } else {
-                print("\(result)")
+                handler(self.parsePhotos(result))
             }
         
         })
     }
+    
+    func parsePhotos(result: AnyObject!) -> [Photo] {
+        var photos = [Photo]()
+        if let photosJson = result as? NSDictionary {
+            print(photosJson)
+            if let dataJson = photosJson["data"] as? NSArray {
+                //print(dataJson)
+                for photoJson in dataJson {
+                    //print(albumJson)
+                    var photo = Photo(id: photoJson["id"] as? String, name: photoJson["name"] as? String, picture: photoJson["picture"] as? String, created_time: photoJson["created_time"] as? String)
+                    photos.append(photo)
+                    //print(photo)
+                }
+            }
+            
+            if let paging = photosJson["paging"] as? NSDictionary {
+                
+            }
+        }
+        return photos
+    }
+
     
 }

@@ -22,6 +22,7 @@
 		1529753A1C20C05E00C6EFA4 /* GraphApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975391C20C05E00C6EFA4 /* GraphApi.swift */; };
 		1529753C1C20C38B00C6EFA4 /* AlbumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529753B1C20C38B00C6EFA4 /* AlbumType.swift */; };
 		1529753E1C20C5DC00C6EFA4 /* AlbumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529753D1C20C5DC00C6EFA4 /* AlbumList.swift */; };
+		152975421C25315A00C6EFA4 /* AlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		152975391C20C05E00C6EFA4 /* GraphApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphApi.swift; sourceTree = "<group>"; };
 		1529753B1C20C38B00C6EFA4 /* AlbumType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumType.swift; sourceTree = "<group>"; };
 		1529753D1C20C5DC00C6EFA4 /* AlbumList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumList.swift; sourceTree = "<group>"; };
+		152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				152975261C1FF94900C6EFA4 /* FBLoginViewController.swift */,
 				152975281C1FFFCA00C6EFA4 /* SettingsViewController.swift */,
 				1529752C1C2008D500C6EFA4 /* AlbumsViewController.swift */,
+				152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */,
 			);
 			path = "Social Photos";
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				152975421C25315A00C6EFA4 /* AlbumCollectionViewController.swift in Sources */,
 				152975381C20C03B00C6EFA4 /* Photo.swift in Sources */,
 				152975101C1FEF0800C6EFA4 /* ViewController.swift in Sources */,
 				1529750E1C1FEF0800C6EFA4 /* AppDelegate.swift in Sources */,
@@ -352,6 +356,7 @@
 				1529751E1C1FEF0800C6EFA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
