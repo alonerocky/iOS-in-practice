@@ -8,9 +8,9 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let sectionInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
 
-class AlbumCollectionViewController: UICollectionViewController {
+class AlbumCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     var graphApi: GraphApi = GraphApi()
     var album: Album?
@@ -22,10 +22,6 @@ class AlbumCollectionViewController: UICollectionViewController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
         if let currentAlbum = album {
             if let albumId = currentAlbum.id {
                 graphApi.fetchPhotos(albumId, handler: photosHandler)
@@ -74,7 +70,7 @@ class AlbumCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("photoReuseIdentifier", forIndexPath: indexPath) as! AlbumPhotoViewCell
     
         // Configure the cell
-        //cell.backgroundColor = UIColor.blackColor()
+        cell.backgroundColor = UIColor.greenColor()
         let photo = photos[indexPath.row]
         
         if let photoUrl = photo.picture {
@@ -91,7 +87,8 @@ class AlbumCollectionViewController: UICollectionViewController {
                             self.photoCache.put(photoUrl, image: image!)
                             dispatch_async(dispatch_get_main_queue(), {
                                 if let cellToUpdate = collectionView.cellForItemAtIndexPath(indexPath) as? AlbumPhotoViewCell  {
-                                cellToUpdate.imageView.image? = image!
+                                    
+                                    cellToUpdate.imageView.image? = image!
                                 }
                             })
                     }
@@ -133,5 +130,16 @@ class AlbumCollectionViewController: UICollectionViewController {
     
     }
     */
+    
+    //MARK: UICollectionViewDelegateFlowLayout
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let frameSize: CGFloat = collectionView.frame.size.width / 3.0 - 10
+        return CGSize(width: frameSize, height: frameSize)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+
 
 }

@@ -117,9 +117,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="zhx-bf-HUg" kind="show" id="B4h-C7-vY1"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -129,6 +126,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Albums" id="SA0-mK-0Ed"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="zhx-bf-HUg" kind="show" identifier="launchAlbumCollection" id="7Wh-EJ-4Qr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmP-EP-Auc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,18 +156,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ttI-ov-fUc">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttI-ov-fUc">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="ttI-ov-fUc" firstAttribute="leading" secondItem="ixY-fd-F1Z" secondAttribute="leading" id="9BI-cH-eXS"/>
-                                    <constraint firstAttribute="bottom" secondItem="ttI-ov-fUc" secondAttribute="bottom" id="LxA-d6-eEK"/>
-                                    <constraint firstItem="ttI-ov-fUc" firstAttribute="top" secondItem="ixY-fd-F1Z" secondAttribute="top" id="WNL-hN-dJc"/>
-                                    <constraint firstAttribute="trailing" secondItem="ttI-ov-fUc" secondAttribute="trailing" id="cNe-tv-qmC"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="ttI-ov-fUc" id="8ss-j6-lBC"/>
                                 </connections>
