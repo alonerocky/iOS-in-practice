@@ -27,7 +27,6 @@ class GraphApi {
             } else {
                 //parse albums
                 handler(self.parseAlbums(result))
-                //print("\(albums)")
             }
         })
        // handler(albums)
@@ -36,14 +35,10 @@ class GraphApi {
     func parseAlbums(result: AnyObject!) -> [Album] {
         var albums = [Album]()
         if let albumsJson = result as? NSDictionary {
-            print(albumsJson)
             if let dataJson = albumsJson["data"] as? NSArray {
-                //print(dataJson)
                 for albumJson in dataJson {
-                    //print(albumJson)
                     var album = Album(id: albumJson["id"] as? String, name: albumJson["name"] as? String, count: albumJson["count"] as? Int)
                     albums.append(album)
-                    //print(album)
                 }
             }
             
@@ -74,14 +69,10 @@ class GraphApi {
     func parsePhotos(result: AnyObject!) -> [Photo] {
         var photos = [Photo]()
         if let photosJson = result as? NSDictionary {
-            print(photosJson)
             if let dataJson = photosJson["data"] as? NSArray {
-                //print(dataJson)
                 for photoJson in dataJson {
-                    //print(albumJson)
                     var photo = Photo(id: photoJson["id"] as? String, name: photoJson["name"] as? String, picture: photoJson["picture"] as? String, created_time: photoJson["created_time"] as? String)
                     photos.append(photo)
-                    //print(photo)
                 }
             }
             
