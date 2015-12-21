@@ -23,6 +23,8 @@
 		1529753C1C20C38B00C6EFA4 /* AlbumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529753B1C20C38B00C6EFA4 /* AlbumType.swift */; };
 		1529753E1C20C5DC00C6EFA4 /* AlbumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529753D1C20C5DC00C6EFA4 /* AlbumList.swift */; };
 		152975421C25315A00C6EFA4 /* AlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */; };
+		152975441C265D6300C6EFA4 /* AlbumPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */; };
+		152975471C287A8100C6EFA4 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975461C287A8100C6EFA4 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		1529753B1C20C38B00C6EFA4 /* AlbumType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumType.swift; sourceTree = "<group>"; };
 		1529753D1C20C5DC00C6EFA4 /* AlbumList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumList.swift; sourceTree = "<group>"; };
 		152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewController.swift; sourceTree = "<group>"; };
+		152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotoViewCell.swift; sourceTree = "<group>"; };
+		152975461C287A8100C6EFA4 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		1529750C1C1FEF0800C6EFA4 /* Social Photos */ = {
 			isa = PBXGroup;
 			children = (
+				152975451C287A6D00C6EFA4 /* cache */,
 				152975321C20BFFE00C6EFA4 /* Facebook */,
 				1529750D1C1FEF0800C6EFA4 /* AppDelegate.swift */,
 				1529750F1C1FEF0800C6EFA4 /* ViewController.swift */,
@@ -90,6 +95,7 @@
 				152975281C1FFFCA00C6EFA4 /* SettingsViewController.swift */,
 				1529752C1C2008D500C6EFA4 /* AlbumsViewController.swift */,
 				152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */,
+				152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */,
 			);
 			path = "Social Photos";
 			sourceTree = "<group>";
@@ -130,6 +136,14 @@
 				152975391C20C05E00C6EFA4 /* GraphApi.swift */,
 			);
 			name = Graph;
+			sourceTree = "<group>";
+		};
+		152975451C287A6D00C6EFA4 /* cache */ = {
+			isa = PBXGroup;
+			children = (
+				152975461C287A8100C6EFA4 /* ImageCache.swift */,
+			);
+			name = cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				152975421C25315A00C6EFA4 /* AlbumCollectionViewController.swift in Sources */,
+				152975471C287A8100C6EFA4 /* ImageCache.swift in Sources */,
+				152975441C265D6300C6EFA4 /* AlbumPhotoViewCell.swift in Sources */,
 				152975381C20C03B00C6EFA4 /* Photo.swift in Sources */,
 				152975101C1FEF0800C6EFA4 /* ViewController.swift in Sources */,
 				1529750E1C1FEF0800C6EFA4 /* AppDelegate.swift in Sources */,

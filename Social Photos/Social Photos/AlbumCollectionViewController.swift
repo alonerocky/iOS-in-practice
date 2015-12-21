@@ -15,6 +15,8 @@ class AlbumCollectionViewController: UICollectionViewController {
     var graphApi: GraphApi = GraphApi()
     var album: Album?
     var photos: [Photo] = []
+    var photoCache = ImageCache()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,10 +71,35 @@ class AlbumCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("photoReuseIdentifier", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("photoReuseIdentifier", forIndexPath: indexPath) as! AlbumPhotoViewCell
     
         // Configure the cell
-        cell.backgroundColor = UIColor.blackColor()
+        //cell.backgroundColor = UIColor.blackColor()
+        let photo = photos[indexPath.row]
+        
+        if let photoUrl = photo.picture {
+            if let image = photoCache.get(photoUrl) {
+                cell.imageView.image? = image
+            } else {
+                let imgURL: NSURL = NSURL(string: photoUrl)!
+                let request: NSURLRequest = NSURLRequest(URL: imgURL)
+                let session = NSURLSession.sharedSession()
+                let dataTask = session.dataTaskWithRequest(request, completionHandler: {
+                    (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+                        if error == nil {
+                            let image = UIImage(data: data!)
+                            self.photoCache.put(photoUrl, image: image!)
+                            dispatch_async(dispatch_get_main_queue(), {
+                                if let cellToUpdate = collectionView.cellForItemAtIndexPath(indexPath) as? AlbumPhotoViewCell  {
+                                cellToUpdate.imageView.image? = image!
+                                }
+                            })
+                    }
+                    
+                    })
+                dataTask.resume()
+            }
+        }
         return cell
     }
 
