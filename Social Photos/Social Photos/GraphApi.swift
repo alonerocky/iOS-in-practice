@@ -58,7 +58,7 @@ class GraphApi {
         let request =  FBSDKGraphRequest(graphPath: "\(albumid)/photos", parameters: PHOTO_PARAMETERS)
         request.startWithCompletionHandler({(connection: FBSDKGraphRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
             if error != nil {
-                
+                print("\(error.localizedDescription)")
             } else {
                 handler(self.parsePhotos(result))
             }
@@ -71,6 +71,7 @@ class GraphApi {
         if let photosJson = result as? NSDictionary {
             if let dataJson = photosJson["data"] as? NSArray {
                 for photoJson in dataJson {
+                    //print("\(photoJson)")
                     var photo = Photo(id: photoJson["id"] as? String, name: photoJson["name"] as? String, picture: photoJson["picture"] as? String, created_time: photoJson["created_time"] as? String)
                     photos.append(photo)
                 }

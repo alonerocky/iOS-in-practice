@@ -156,18 +156,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ttI-ov-fUc">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttI-ov-fUc">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="ttI-ov-fUc" firstAttribute="top" secondItem="ixY-fd-F1Z" secondAttribute="top" id="D7t-Qh-TSr"/>
-                                    <constraint firstAttribute="trailing" secondItem="ttI-ov-fUc" secondAttribute="trailing" id="GRO-RM-coX"/>
-                                    <constraint firstAttribute="bottom" secondItem="ttI-ov-fUc" secondAttribute="bottom" id="U7R-MN-t9J"/>
-                                    <constraint firstItem="ttI-ov-fUc" firstAttribute="leading" secondItem="ixY-fd-F1Z" secondAttribute="leading" id="hCq-yT-RjA"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="ttI-ov-fUc" id="8ss-j6-lBC"/>
                                 </connections>

@@ -8,17 +8,31 @@
 
 import UIKit
 private let reuseIdentifier: String = "photoReuseIdentifier"
-private let sectionInsets = UIEdgeInsets(top: 2.0, left: 2.0, bottom: 2.0, right: 2.0)
+private let sectionInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
 
 class AlbumCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var graphApi: GraphApi = GraphApi()
     var album: Album?
     var photos: [Photo] = []
-    var photoCache = ImageCache()
+    let COLUMN_SIZE: Int = 3
+    var photoCache: ImageCache
+    
+    required init?(coder aDecoder: NSCoder) {
+        photoCache = (UIApplication.sharedApplication().delegate as! AppDelegate).photoCache
+        super.init(coder: aDecoder)
+        
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        photoCache = (UIApplication.sharedApplication().delegate as! AppDelegate).photoCache
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -70,13 +84,15 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! AlbumPhotoViewCell
         
         // Configure the cell
-        cell.backgroundColor = UIColor.greenColor()
+        //cell.backgroundColor = UIColor.greenColor()
         let photo = photos[indexPath.row]
         
         if let photoUrl = photo.picture {
             if let image = photoCache.get(photoUrl) {
+                print("load from cache")
                 cell.imageView.image = image
             } else {
+                print("load from network")
                 let imgURL: NSURL = NSURL(string: photoUrl)!
                 let request: NSURLRequest = NSURLRequest(URL: imgURL)
                 let session = NSURLSession.sharedSession()
@@ -132,8 +148,11 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
     
     //MARK: UICollectionViewDelegateFlowLayout
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let frameSize: CGFloat = collectionView.frame.size.width / 3.0 - 4.0
-        return CGSize(width: frameSize, height: frameSize)
+        let frameSize: CGFloat = self.collectionView!.frame.size.width
+        print("frame size: \(frameSize)")
+        let width: CGFloat = ((frameSize - 10 )/3.0)
+        print("width: \(width)")
+        return CGSize(width: width, height: width)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
