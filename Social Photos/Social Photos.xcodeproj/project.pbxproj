@@ -25,6 +25,7 @@
 		152975421C25315A00C6EFA4 /* AlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */; };
 		152975441C265D6300C6EFA4 /* AlbumPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */; };
 		152975471C287A8100C6EFA4 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975461C287A8100C6EFA4 /* ImageCache.swift */; };
+		1529754A1C2B633500C6EFA4 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975491C2B633500C6EFA4 /* ImageDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewController.swift; sourceTree = "<group>"; };
 		152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotoViewCell.swift; sourceTree = "<group>"; };
 		152975461C287A8100C6EFA4 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		152975491C2B633500C6EFA4 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		1529750C1C1FEF0800C6EFA4 /* Social Photos */ = {
 			isa = PBXGroup;
 			children = (
+				152975481C2B631B00C6EFA4 /* image */,
 				152975451C287A6D00C6EFA4 /* cache */,
 				152975321C20BFFE00C6EFA4 /* Facebook */,
 				1529750D1C1FEF0800C6EFA4 /* AppDelegate.swift */,
@@ -144,6 +147,14 @@
 				152975461C287A8100C6EFA4 /* ImageCache.swift */,
 			);
 			name = cache;
+			sourceTree = "<group>";
+		};
+		152975481C2B631B00C6EFA4 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				152975491C2B633500C6EFA4 /* ImageDownloader.swift */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 			files = (
 				152975421C25315A00C6EFA4 /* AlbumCollectionViewController.swift in Sources */,
 				152975471C287A8100C6EFA4 /* ImageCache.swift in Sources */,
+				1529754A1C2B633500C6EFA4 /* ImageDownloader.swift in Sources */,
 				152975441C265D6300C6EFA4 /* AlbumPhotoViewCell.swift in Sources */,
 				152975381C20C03B00C6EFA4 /* Photo.swift in Sources */,
 				152975101C1FEF0800C6EFA4 /* ViewController.swift in Sources */,

@@ -16,6 +16,35 @@ class GraphApi {
     
     let PHOTO_PARAMETERS = ["fields": "id, name, created_time, picture"]
     
+    let ME_PARAMETERS = ["fields": "picture{width,height,url}"]
+    
+    //me profile picture
+    func fetchMeProfilePicture(handler: (String -> Void)) {
+    
+        let request = FBSDKGraphRequest(graphPath: "me", parameters: ME_PARAMETERS)
+    
+        request.startWithCompletionHandler({(connection: FBSDKGraphRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
+            if error != nil {
+                print(error.localizedDescription)
+            } else {
+                //parse albums
+                //handler(self.parseAlbums(result))
+                print("\(result)")
+                if let profile = result as? NSDictionary {
+                    if let picture = profile["picture"] as? NSDictionary {
+                        if let pictureData = picture["data"] as? NSDictionary {
+                            if let pictureUrl = pictureData["url"] as? String {
+                                handler(pictureUrl)
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        })
+    
+    }
+    
     //albums
     func fetchAlbums(handler: ([Album] -> Void)) {
         //var albums: [Album] = []

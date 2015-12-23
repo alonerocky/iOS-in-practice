@@ -92,24 +92,16 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
                 print("load from cache")
                 cell.imageView.image = image
             } else {
-                print("load from network")
-                let imgURL: NSURL = NSURL(string: photoUrl)!
-                let request: NSURLRequest = NSURLRequest(URL: imgURL)
-                let session = NSURLSession.sharedSession()
-                let dataTask = session.dataTaskWithRequest(request, completionHandler: {
-                    (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-                    if error == nil {
-                        let image = UIImage(data: data!)
-                        self.photoCache.put(photoUrl, image: image!)
-                        dispatch_async(dispatch_get_main_queue(), {
-                            if let cellToUpdate = collectionView.cellForItemAtIndexPath(indexPath) as? AlbumPhotoViewCell  {
-                                
-                                cellToUpdate.imageView.image = image!
-                            }
-                        })
-                    }
-                })
-                dataTask.resume()
+                print("load from network")                
+                let imageDownlader = ImageDownloader()
+                imageDownlader.loadImage(photoUrl, completeHandler: {(image: UIImage) -> Void in
+                    self.photoCache.put(photoUrl, image: image)
+                    dispatch_async(dispatch_get_main_queue(), {
+                        if let cellToUpdate = collectionView.cellForItemAtIndexPath(indexPath) as? AlbumPhotoViewCell  {
+                            cellToUpdate.imageView.image = image
+                        }
+                    })
+                    }, errorHandler: nil)
             }
         }
         return cell

@@ -11,7 +11,8 @@ import FBSDKLoginKit
 
 class SettingsViewController: UIViewController {
     
-    
+    var graphApi: GraphApi = GraphApi()
+    @IBOutlet weak var profilePictureImageView: UIImageView!
     
     @IBAction func logoutTapped(sender: AnyObject) {
         let loginManager = FBSDKLoginManager()
@@ -29,6 +30,16 @@ class SettingsViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
+        graphApi.fetchMeProfilePicture(loadProfilePicture)
+    }
+    
+    func loadProfilePicture(pictureUrl: String) {
+        let imageDownloader = ImageDownloader()
+        imageDownloader.loadImage(pictureUrl, completeHandler: {(image: UIImage) -> Void in
+            dispatch_async(dispatch_get_main_queue(), {
+                self.profilePictureImageView.image = image
+            })
+            }, errorHandler: nil)
     }
     
     override func didReceiveMemoryWarning() {
