@@ -26,6 +26,7 @@
 		152975441C265D6300C6EFA4 /* AlbumPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */; };
 		152975471C287A8100C6EFA4 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975461C287A8100C6EFA4 /* ImageCache.swift */; };
 		1529754A1C2B633500C6EFA4 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975491C2B633500C6EFA4 /* ImageDownloader.swift */; };
+		1529754E1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529754D1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotoViewCell.swift; sourceTree = "<group>"; };
 		152975461C287A8100C6EFA4 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		152975491C2B633500C6EFA4 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		1529754D1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				1529752C1C2008D500C6EFA4 /* AlbumsViewController.swift */,
 				152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */,
 				152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */,
+				1529754D1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift */,
 			);
 			path = "Social Photos";
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			files = (
 				152975421C25315A00C6EFA4 /* AlbumCollectionViewController.swift in Sources */,
 				152975471C287A8100C6EFA4 /* ImageCache.swift in Sources */,
+				1529754E1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift in Sources */,
 				1529754A1C2B633500C6EFA4 /* ImageDownloader.swift in Sources */,
 				152975441C265D6300C6EFA4 /* AlbumPhotoViewCell.swift in Sources */,
 				152975381C20C03B00C6EFA4 /* Photo.swift in Sources */,

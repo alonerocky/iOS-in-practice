@@ -73,6 +73,7 @@
         <scene sceneID="TTY-TQ-TF1">
             <objects>
                 <tabBarController storyboardIdentifier="HomeViewController" id="HEr-hL-f3n" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pr7-57-0qY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="74y-rk-dlC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -81,6 +82,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="E1o-xC-gZS" kind="relationship" relationship="viewControllers" id="Een-46-WUy"/>
+                        <segue destination="lXq-xh-dvm" kind="relationship" relationship="viewControllers" id="uNF-m0-EmW"/>
                         <segue destination="vg7-jV-Q8E" kind="relationship" relationship="viewControllers" id="3fi-sx-N7g"/>
                     </connections>
                 </tabBarController>
@@ -156,7 +158,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="photoReuseIdentifier" id="ixY-fd-F1Z" customClass="AlbumPhotoViewCell" customModule="Social_Photos" customModuleProvider="target">
-                                <rect key="frame" x="88" y="64" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="64" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -203,6 +205,26 @@
             </objects>
             <point key="canvasLocation" x="472.5" y="1096.5"/>
         </scene>
+        <!--Photo Library View Controller-->
+        <scene sceneID="Ftw-fS-dOq">
+            <objects>
+                <viewController id="HRI-pc-6ZB" customClass="PhotoLibraryViewController" customModule="Social_Photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nBv-26-cZq"/>
+                        <viewControllerLayoutGuide type="bottom" id="jse-oS-6qY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cou-dp-o3H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jVD-5w-Pvz"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ory-hQ-1Dy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914.5" y="1823.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mxt-h7-rkj">
             <objects>
@@ -221,6 +243,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5B-79-vm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="472" y="-382"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="6iw-gv-HvQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lXq-xh-dvm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Library" id="5vc-RM-KWA"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2xN-Ke-4lM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HRI-pc-6ZB" kind="relationship" relationship="rootViewController" id="7NA-Rp-TXk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Pb-00-mTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471.5" y="1823.5"/>
         </scene>
     </scenes>
 </document>

@@ -8,15 +8,17 @@
 
 import UIKit
 private let reuseIdentifier: String = "photoReuseIdentifier"
-private let sectionInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
 
 class AlbumCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var graphApi: GraphApi = GraphApi()
     var album: Album?
     var photos: [Photo] = []
-    let COLUMN_SIZE: Int = 3
+    let LINE_SPACING: CGFloat = 1.0
+    let INTERITEM_SPACING: CGFloat = 1.0
     var photoCache: ImageCache
+    
+    let refreshControl = UIRefreshControl()
     
     required init?(coder aDecoder: NSCoder) {
         photoCache = (UIApplication.sharedApplication().delegate as! AppDelegate).photoCache
@@ -31,8 +33,7 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -140,15 +141,16 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
     
     //MARK: UICollectionViewDelegateFlowLayout
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let frameSize: CGFloat = self.collectionView!.frame.size.width
-        print("frame size: \(frameSize)")
-        let width: CGFloat = ((frameSize - 10 )/3.0)
-        print("width: \(width)")
-        return CGSize(width: width, height: width)
+        let itemWidth = (view.bounds.size.width - 2 * INTERITEM_SPACING) / 3
+        return CGSize(width: itemWidth, height: itemWidth)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return sectionInsets
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return LINE_SPACING
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return INTERITEM_SPACING
     }
     
     
