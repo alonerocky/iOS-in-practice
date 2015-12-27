@@ -14,7 +14,7 @@ class GraphApi {
     
     let ALBUMS_PARAMETERS = ["fields": "id, name, count, cover_photo, created_time, description, location, type, from"]
     
-    let PHOTO_PARAMETERS = ["fields": "id, name, created_time, picture"]
+    let PHOTO_PARAMETERS = ["fields": "id, name, created_time, picture, images"]
     
     let ME_PARAMETERS = ["fields": "picture{width,height,url}"]
     

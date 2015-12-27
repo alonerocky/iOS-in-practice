@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKShareKit
 
+private let ALBUM_REUSE_ID: String = "albumReuseIdentifier"
 class AlbumsViewController: UITableViewController {
     
     var graphApi: GraphApi = GraphApi()
@@ -23,6 +24,7 @@ class AlbumsViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: ALBUM_REUSE_ID)
         graphApi.fetchAlbums(albumsHandler)
         
     }
@@ -54,7 +56,7 @@ class AlbumsViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("albumReuseIdentifier", forIndexPath: indexPath)
+    let cell = tableView.dequeueReusableCellWithIdentifier(ALBUM_REUSE_ID, forIndexPath: indexPath)
     
     // Configure the cell...
     cell.textLabel?.text = albums[indexPath.row].name

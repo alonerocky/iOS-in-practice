@@ -7,7 +7,7 @@
 //
 
 import UIKit
-private let reuseIdentifier: String = "photoReuseIdentifier"
+private let PHOTO_RESUSE_ID: String = "photoReuseIdentifier"
 
 class AlbumCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -37,6 +37,7 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+        collectionView?.registerClass(AlbumPhotoViewCell.self, forCellWithReuseIdentifier: PHOTO_RESUSE_ID)
         if let currentAlbum = album {
             if let albumId = currentAlbum.id {
                 graphApi.fetchPhotos(albumId, handler: photosHandler)
@@ -82,7 +83,7 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! AlbumPhotoViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(PHOTO_RESUSE_ID, forIndexPath: indexPath) as! AlbumPhotoViewCell
         
         // Configure the cell
         //cell.backgroundColor = UIColor.greenColor()
