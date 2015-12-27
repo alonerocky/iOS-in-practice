@@ -24,7 +24,8 @@ class AlbumsViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: ALBUM_REUSE_ID)
+        //TODO , register class ?
+        //tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: ALBUM_REUSE_ID)
         graphApi.fetchAlbums(albumsHandler)
         
     }

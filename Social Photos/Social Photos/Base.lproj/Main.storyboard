@@ -90,12 +90,13 @@
             </objects>
             <point key="canvasLocation" x="-9.5" y="795.5"/>
         </scene>
-        <!--Albums-->
+        <!--Shared-->
         <scene sceneID="niD-bz-nMD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E1o-xC-gZS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Albums" id="m3a-SM-rBG"/>
+                    <tabBarItem key="tabBarItem" title="Shared" id="m3a-SM-rBG"/>
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dZW-CS-D37">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -107,7 +108,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PjC-nF-JZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472.5" y="372.5"/>
+            <point key="canvasLocation" x="471.5" y="333.5"/>
         </scene>
         <!--Albums-->
         <scene sceneID="Q15-XR-WLG">
@@ -192,6 +193,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vg7-jV-Q8E" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="QdW-4v-R1B"/>
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CDo-xj-bdm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -203,27 +205,37 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ek1-wz-ZcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472.5" y="1096.5"/>
+            <point key="canvasLocation" x="471.5" y="1050.5"/>
         </scene>
-        <!--Photo Library View Controller-->
-        <scene sceneID="Ftw-fS-dOq">
+        <!--Gallery View Controller-->
+        <scene sceneID="34L-2Y-eSK">
             <objects>
-                <viewController id="HRI-pc-6ZB" customClass="PhotoLibraryViewController" customModule="Social_Photos" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nBv-26-cZq"/>
-                        <viewControllerLayoutGuide type="bottom" id="jse-oS-6qY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Cou-dp-o3H">
+                <tableViewController id="IXX-qo-JXi" customClass="GalleryViewController" customModule="Social_Photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="PmE-Ta-8bF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jVD-5w-Pvz"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="sSi-y4-35k">
+                                <rect key="frame" x="0.0" y="113.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sSi-y4-35k" id="ubw-eW-3s5">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IXX-qo-JXi" id="iSE-Yi-eCU"/>
+                            <outlet property="delegate" destination="IXX-qo-JXi" id="TQx-Pd-1K1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="NDn-27-PbF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ory-hQ-1Dy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXp-Xj-OW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914.5" y="1823.5"/>
+            <point key="canvasLocation" x="471.5" y="1802.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mxt-h7-rkj">
@@ -244,11 +256,11 @@
             </objects>
             <point key="canvasLocation" x="472" y="-382"/>
         </scene>
-        <!--Library-->
+        <!--Albums-->
         <scene sceneID="6iw-gv-HvQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lXq-xh-dvm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Library" id="5vc-RM-KWA"/>
+                    <tabBarItem key="tabBarItem" title="Albums" id="5vc-RM-KWA"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2xN-Ke-4lM">
@@ -257,12 +269,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="HRI-pc-6ZB" kind="relationship" relationship="rootViewController" id="7NA-Rp-TXk"/>
+                        <segue destination="IXX-qo-JXi" kind="relationship" relationship="rootViewController" id="Xwg-D7-WJc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Pb-00-mTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471.5" y="1823.5"/>
+            <point key="canvasLocation" x="-9.5" y="1802.5"/>
         </scene>
     </scenes>
 </document>

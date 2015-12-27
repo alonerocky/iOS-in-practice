@@ -37,7 +37,8 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        collectionView?.registerClass(AlbumPhotoViewCell.self, forCellWithReuseIdentifier: PHOTO_RESUSE_ID)
+        //TODO , register class ?
+        //collectionView?.registerClass(AlbumPhotoViewCell.self, forCellWithReuseIdentifier: PHOTO_RESUSE_ID)
         if let currentAlbum = album {
             if let albumId = currentAlbum.id {
                 graphApi.fetchPhotos(albumId, handler: photosHandler)

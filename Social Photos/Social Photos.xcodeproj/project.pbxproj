@@ -27,6 +27,8 @@
 		152975471C287A8100C6EFA4 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975461C287A8100C6EFA4 /* ImageCache.swift */; };
 		1529754A1C2B633500C6EFA4 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975491C2B633500C6EFA4 /* ImageDownloader.swift */; };
 		1529754E1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529754D1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift */; };
+		15DA886C1C2FDBF800D4E0E5 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA886B1C2FDBF800D4E0E5 /* GalleryViewController.swift */; };
+		15DA886E1C2FE34D00D4E0E5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DA886D1C2FE34D00D4E0E5 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		152975461C287A8100C6EFA4 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		152975491C2B633500C6EFA4 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		1529754D1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
+		15DA886B1C2FDBF800D4E0E5 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		15DA886D1C2FE34D00D4E0E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		1529750C1C1FEF0800C6EFA4 /* Social Photos */ = {
 			isa = PBXGroup;
 			children = (
+				15DA886D1C2FE34D00D4E0E5 /* Launch Screen.storyboard */,
 				152975481C2B631B00C6EFA4 /* image */,
 				152975451C287A6D00C6EFA4 /* cache */,
 				152975321C20BFFE00C6EFA4 /* Facebook */,
@@ -102,6 +107,7 @@
 				152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */,
 				152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */,
 				1529754D1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift */,
+				15DA886B1C2FDBF800D4E0E5 /* GalleryViewController.swift */,
 			);
 			path = "Social Photos";
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15DA886E1C2FE34D00D4E0E5 /* Launch Screen.storyboard in Resources */,
 				152975151C1FEF0800C6EFA4 /* Assets.xcassets in Resources */,
 				152975131C1FEF0800C6EFA4 /* Main.storyboard in Resources */,
 			);
@@ -235,6 +242,7 @@
 				1529754E1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift in Sources */,
 				1529754A1C2B633500C6EFA4 /* ImageDownloader.swift in Sources */,
 				152975441C265D6300C6EFA4 /* AlbumPhotoViewCell.swift in Sources */,
+				15DA886C1C2FDBF800D4E0E5 /* GalleryViewController.swift in Sources */,
 				152975381C20C03B00C6EFA4 /* Photo.swift in Sources */,
 				152975101C1FEF0800C6EFA4 /* ViewController.swift in Sources */,
 				1529750E1C1FEF0800C6EFA4 /* AppDelegate.swift in Sources */,
