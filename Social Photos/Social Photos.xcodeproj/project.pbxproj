@@ -26,9 +26,9 @@
 		152975441C265D6300C6EFA4 /* AlbumPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */; };
 		152975471C287A8100C6EFA4 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975461C287A8100C6EFA4 /* ImageCache.swift */; };
 		1529754A1C2B633500C6EFA4 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152975491C2B633500C6EFA4 /* ImageDownloader.swift */; };
-		1529754E1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529754D1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift */; };
 		15DA886C1C2FDBF800D4E0E5 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA886B1C2FDBF800D4E0E5 /* GalleryViewController.swift */; };
 		15DA886E1C2FE34D00D4E0E5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DA886D1C2FE34D00D4E0E5 /* Launch Screen.storyboard */; };
+		15DDA5FC1C32653400DA522D /* AssetsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DDA5FB1C32653400DA522D /* AssetsGridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,9 +53,9 @@
 		152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotoViewCell.swift; sourceTree = "<group>"; };
 		152975461C287A8100C6EFA4 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		152975491C2B633500C6EFA4 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		1529754D1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		15DA886B1C2FDBF800D4E0E5 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		15DA886D1C2FE34D00D4E0E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		15DDA5FB1C32653400DA522D /* AssetsGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsGridViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +106,8 @@
 				1529752C1C2008D500C6EFA4 /* AlbumsViewController.swift */,
 				152975411C25315A00C6EFA4 /* AlbumCollectionViewController.swift */,
 				152975431C265D6300C6EFA4 /* AlbumPhotoViewCell.swift */,
-				1529754D1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift */,
 				15DA886B1C2FDBF800D4E0E5 /* GalleryViewController.swift */,
+				15DDA5FB1C32653400DA522D /* AssetsGridViewController.swift */,
 			);
 			path = "Social Photos";
 			sourceTree = "<group>";
@@ -239,7 +239,6 @@
 			files = (
 				152975421C25315A00C6EFA4 /* AlbumCollectionViewController.swift in Sources */,
 				152975471C287A8100C6EFA4 /* ImageCache.swift in Sources */,
-				1529754E1C2B6D2400C6EFA4 /* PhotoLibraryViewController.swift in Sources */,
 				1529754A1C2B633500C6EFA4 /* ImageDownloader.swift in Sources */,
 				152975441C265D6300C6EFA4 /* AlbumPhotoViewCell.swift in Sources */,
 				15DA886C1C2FDBF800D4E0E5 /* GalleryViewController.swift in Sources */,
@@ -248,6 +247,7 @@
 				1529750E1C1FEF0800C6EFA4 /* AppDelegate.swift in Sources */,
 				152975271C1FF94900C6EFA4 /* FBLoginViewController.swift in Sources */,
 				1529753C1C20C38B00C6EFA4 /* AlbumType.swift in Sources */,
+				15DDA5FC1C32653400DA522D /* AssetsGridViewController.swift in Sources */,
 				152975291C1FFFCA00C6EFA4 /* SettingsViewController.swift in Sources */,
 				1529753A1C20C05E00C6EFA4 /* GraphApi.swift in Sources */,
 				1529753E1C20C5DC00C6EFA4 /* AlbumList.swift in Sources */,

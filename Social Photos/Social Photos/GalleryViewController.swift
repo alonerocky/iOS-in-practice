@@ -11,6 +11,9 @@ import Photos
 
 private let AllPhotosReuseIdentifier = "AllPhotosCell"
 private let CollectionCellReuseIdentifier = "CollectionCell"
+private let AllPhotosSegue = "showAllPhotos"
+private let CollectionSegue = "showCollection"
+
 class GalleryViewController: UITableViewController , PHPhotoLibraryChangeObserver {
 
     var sectionFetchResults: [PHFetchResult] = []
@@ -119,6 +122,16 @@ class GalleryViewController: UITableViewController , PHPhotoLibraryChangeObserve
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.sectionLocalizedTitles[section]
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("tableView")
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        if indexPath.section == 0 {
+            performSegueWithIdentifier(AllPhotosSegue, sender: cell)
+        } else {
+            performSegueWithIdentifier(CollectionSegue, sender: cell)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -155,14 +168,24 @@ class GalleryViewController: UITableViewController , PHPhotoLibraryChangeObserve
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        print("prepareForSegure : \(segue.identifier)")
+        if let assetsGridViewController = segue.destinationViewController as? AssetsGridViewController {
+            if segue.identifier == AllPhotosSegue {
+                let cell = sender as! UITableViewCell
+                assetsGridViewController.title = cell.textLabel?.text
+            } else if segue.identifier == CollectionSegue {
+                let cell = sender as! UITableViewCell
+                assetsGridViewController.title = cell.textLabel?.text
+            }
+        }
     }
-    */
+
 
 }
