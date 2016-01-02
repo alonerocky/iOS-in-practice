@@ -12,13 +12,14 @@ import Photos
 
 private let reuseIdentifier = "assetReuseIdentifier"
 
-class AssetsGridViewController: UICollectionViewController, PHPhotoLibraryChangeObserver {
+class AssetsGridViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, PHPhotoLibraryChangeObserver {
     
     var assetsFetchResults: PHFetchResult?
     var assetCollection: PHAssetCollection?
     
     let LINE_SPACING: CGFloat = 1.0
     let INTERITEM_SPACING: CGFloat = 1.0
+    let COLUMNS: CGFloat = 3.0
     
     private var imageManager: PHCachingImageManager?
     private var previousPreheatRect: CGRect = CGRect()
@@ -64,7 +65,7 @@ class AssetsGridViewController: UICollectionViewController, PHPhotoLibraryChange
         // Determine the size of the thumbnails to request from the PHCachingImageManager
         let scale = UIScreen.mainScreen().scale
         //let cellSize = (self.collectionViewLayout as! UICollectionViewFlowLayout).itemSize
-        let itemWidth = (view.bounds.size.width - 2 * INTERITEM_SPACING) / 3
+        let itemWidth = getCollectionCellSize()
         let cellSize = CGSize(width: itemWidth, height: itemWidth)
         AssetsGridViewController.AssetGridThumbnailSize = CGSizeMake(cellSize.width * scale, cellSize.height * scale)
         
@@ -220,7 +221,7 @@ class AssetsGridViewController: UICollectionViewController, PHPhotoLibraryChange
     */
     //MARK: UICollectionViewDelegateFlowLayout
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let itemWidth = (view.bounds.size.width - 2 * INTERITEM_SPACING) / 3
+        let itemWidth = getCollectionCellSize()
         return CGSize(width: itemWidth, height: itemWidth)
     }
     
@@ -330,6 +331,10 @@ class AssetsGridViewController: UICollectionViewController, PHPhotoLibraryChange
         let assets = indexPaths.map{self.assetsFetchResults![$0.item] as! PHAsset}
         
         return assets
+    }
+    
+    func getCollectionCellSize() -> CGFloat {
+        return (view.bounds.size.width - ( COLUMNS - 1 ) * INTERITEM_SPACING) / COLUMNS
     }
 
 }
