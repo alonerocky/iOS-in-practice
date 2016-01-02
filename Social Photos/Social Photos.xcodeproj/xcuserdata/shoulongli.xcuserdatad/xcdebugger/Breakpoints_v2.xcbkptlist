@@ -278,7 +278,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Social Photos/GalleryViewController.swift"
@@ -289,38 +289,6 @@
             endingLineNumber = "99"
             landmarkName = "photoLibraryDidChange(_:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Social_Photos.GalleryViewController.photoLibraryDidChange (Social_Photos.GalleryViewController)(__ObjC.PHChange) -&gt; ()"
-                  moduleName = "Social Photos"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shoulongli/Development/iOS/iOS-in-practice/Social%20Photos/Social%20Photos/GalleryViewController.swift"
-                  timestampString = "473066732.612703"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Social_Photos.GalleryViewController.(photoLibraryDidChange (Social_Photos.GalleryViewController) -&gt; (__ObjC.PHChange) -&gt; ()).(closure #1)"
-                  moduleName = "Social Photos"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shoulongli/Development/iOS/iOS-in-practice/Social%20Photos/Social%20Photos/GalleryViewController.swift"
-                  timestampString = "473066732.612926"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -352,6 +320,22 @@
             startingLineNumber = "65"
             endingLineNumber = "65"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Social Photos/AssetsGridViewController.swift"
+            timestampString = "473417095.781511"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

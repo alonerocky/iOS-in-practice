@@ -177,13 +177,34 @@ class GalleryViewController: UITableViewController , PHPhotoLibraryChangeObserve
         // Pass the selected object to the new view controller.
         print("prepareForSegure : \(segue.identifier)")
         if let assetsGridViewController = segue.destinationViewController as? AssetsGridViewController {
-            if segue.identifier == AllPhotosSegue {
-                let cell = sender as! UITableViewCell
+            
+            if let cell = sender as? UITableViewCell {
                 assetsGridViewController.title = cell.textLabel?.text
-            } else if segue.identifier == CollectionSegue {
-                let cell = sender as! UITableViewCell
-                assetsGridViewController.title = cell.textLabel?.text
+                if segue.identifier == AllPhotosSegue || segue.identifier == CollectionSegue {
+                    
+                    // Get the PHFetchResult for the selected section.
+                    let indexPath = self.tableView.indexPathForCell(cell)!
+                    let fetchResult = self.sectionFetchResults[indexPath.section]
+                    
+                    if segue.identifier == AllPhotosSegue {
+                        assetsGridViewController.assetsFetchResults = fetchResult
+                    } else if segue.identifier == CollectionSegue {
+                        // Get the PHAssetCollection for the selected row.
+                        guard let assetCollection = fetchResult[indexPath.row] as? PHAssetCollection else {
+                            return
+                        }
+                        
+                        // Configure the AAPLAssetGridViewController with the asset collection.
+                        let assetsFetchResult = PHAsset.fetchAssetsInAssetCollection(assetCollection, options: nil)
+                        
+                        assetsGridViewController.assetsFetchResults = assetsFetchResult
+                        assetsGridViewController.assetCollection = assetCollection
+                    }
+
+                }
             }
+            
+            
         }
     }
 
