@@ -17,9 +17,9 @@ class AssetsGridViewController: UICollectionViewController, UICollectionViewDele
     var assetsFetchResults: PHFetchResult?
     var assetCollection: PHAssetCollection?
     
-    let LINE_SPACING: CGFloat = 1.0
-    let INTERITEM_SPACING: CGFloat = 1.0
-    let COLUMNS: CGFloat = 3.0
+    let LINE_SPACING: CGFloat = 2.0
+    let INTERITEM_SPACING: CGFloat = 2.0
+    let COLUMNS: CGFloat = 4.0
     
     private var imageManager: PHCachingImageManager?
     private var previousPreheatRect: CGRect = CGRect()

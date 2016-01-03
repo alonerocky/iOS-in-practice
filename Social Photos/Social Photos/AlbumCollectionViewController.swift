@@ -14,8 +14,9 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
     var graphApi: GraphApi = GraphApi()
     var album: Album?
     var photos: [Photo] = []
-    let LINE_SPACING: CGFloat = 1.0
-    let INTERITEM_SPACING: CGFloat = 1.0
+    let LINE_SPACING: CGFloat = 2.0
+    let INTERITEM_SPACING: CGFloat = 2.0
+    let COLUMNS: CGFloat = 4.0
     var photoCache: ImageCache
     
     let refreshControl = UIRefreshControl()
@@ -143,7 +144,7 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
     
     //MARK: UICollectionViewDelegateFlowLayout
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let itemWidth = (view.bounds.size.width - 2 * INTERITEM_SPACING) / 3
+        let itemWidth = getCollectionCellSize()
         return CGSize(width: itemWidth, height: itemWidth)
     }
     
@@ -153,6 +154,10 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return INTERITEM_SPACING
+    }
+    
+    func getCollectionCellSize() -> CGFloat {
+        return (view.bounds.size.width - ( COLUMNS - 1 ) * INTERITEM_SPACING) / COLUMNS
     }
     
     
