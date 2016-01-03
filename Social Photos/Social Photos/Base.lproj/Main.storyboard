@@ -67,7 +67,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxB-zZ-fhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1726.5" y="1096.5"/>
+            <point key="canvasLocation" x="930.5" y="1050.5"/>
+        </scene>
+        <!--Asset View Controller-->
+        <scene sceneID="mRa-Bn-qWX">
+            <objects>
+                <viewController id="7ka-nf-LYX" customClass="AssetViewController" customModule="Social_Photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3H-oD-EDD"/>
+                        <viewControllerLayoutGuide type="bottom" id="lHj-CQ-POo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cqv-OF-0F3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8O1-eo-AlY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="2"/>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvq-1U-3a5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="qvq-1U-3a5" id="iBd-Xl-hhp"/>
+                        <outlet property="progressView" destination="8O1-eo-AlY" id="zy5-qC-k09"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EFl-V8-85q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388.5" y="1807.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TTY-TQ-TF1">
@@ -141,7 +172,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmP-EP-Auc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914.5" y="372.5"/>
+            <point key="canvasLocation" x="935.5" y="333.5"/>
         </scene>
         <!--Album Collection View Controller-->
         <scene sceneID="L8E-tA-g23">
@@ -185,7 +216,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQr-OX-rTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378.5" y="372.5"/>
+            <point key="canvasLocation" x="1395.5" y="333.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="mwt-Zf-v11">
@@ -280,6 +311,9 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="xVx-Pv-7uv"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="7ka-nf-LYX" kind="show" identifier="showAsset" id="FXq-os-1fB"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqH-iI-oeD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

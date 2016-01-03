@@ -30,6 +30,7 @@
 		158340341C37B9CF00A8BC5E /* NSIndexSet+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158340311C37B9CF00A8BC5E /* NSIndexSet+Convenience.swift */; };
 		158340351C37B9CF00A8BC5E /* UICollectionView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158340321C37B9CF00A8BC5E /* UICollectionView+Convenience.swift */; };
 		158340371C37BC5F00A8BC5E /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158340361C37BC5F00A8BC5E /* GridViewCell.swift */; };
+		158340391C390A6200A8BC5E /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158340381C390A6200A8BC5E /* AssetViewController.swift */; };
 		15DA886C1C2FDBF800D4E0E5 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA886B1C2FDBF800D4E0E5 /* GalleryViewController.swift */; };
 		15DA886E1C2FE34D00D4E0E5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DA886D1C2FE34D00D4E0E5 /* Launch Screen.storyboard */; };
 		15DDA5FC1C32653400DA522D /* AssetsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DDA5FB1C32653400DA522D /* AssetsGridViewController.swift */; };
@@ -61,6 +62,7 @@
 		158340311C37B9CF00A8BC5E /* NSIndexSet+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSIndexSet+Convenience.swift"; sourceTree = "<group>"; };
 		158340321C37B9CF00A8BC5E /* UICollectionView+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Convenience.swift"; sourceTree = "<group>"; };
 		158340361C37BC5F00A8BC5E /* GridViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
+		158340381C390A6200A8BC5E /* AssetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetViewController.swift; sourceTree = "<group>"; };
 		15DA886B1C2FDBF800D4E0E5 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		15DA886D1C2FE34D00D4E0E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 		15DDA5FB1C32653400DA522D /* AssetsGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsGridViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				15DA886B1C2FDBF800D4E0E5 /* GalleryViewController.swift */,
 				15DDA5FB1C32653400DA522D /* AssetsGridViewController.swift */,
 				158340361C37BC5F00A8BC5E /* GridViewCell.swift */,
+				158340381C390A6200A8BC5E /* AssetViewController.swift */,
 			);
 			path = "Social Photos";
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				158340331C37B9CF00A8BC5E /* CIImage+Convenience.swift in Sources */,
 				152975271C1FF94900C6EFA4 /* FBLoginViewController.swift in Sources */,
 				158340341C37B9CF00A8BC5E /* NSIndexSet+Convenience.swift in Sources */,
+				158340391C390A6200A8BC5E /* AssetViewController.swift in Sources */,
 				1529753C1C20C38B00C6EFA4 /* AlbumType.swift in Sources */,
 				15DDA5FC1C32653400DA522D /* AssetsGridViewController.swift in Sources */,
 				152975291C1FFFCA00C6EFA4 /* SettingsViewController.swift in Sources */,

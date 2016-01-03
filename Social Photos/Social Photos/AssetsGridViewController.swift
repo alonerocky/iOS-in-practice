@@ -190,6 +190,11 @@ class AssetsGridViewController: UICollectionViewController, UICollectionViewDele
     }
 
     // MARK: UICollectionViewDelegate
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath)
+        self.performSegueWithIdentifier("showAsset", sender: cell)
+        
+    }
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
@@ -335,6 +340,15 @@ class AssetsGridViewController: UICollectionViewController, UICollectionViewDele
     
     func getCollectionCellSize() -> CGFloat {
         return (view.bounds.size.width - ( COLUMNS - 1 ) * INTERITEM_SPACING) / COLUMNS
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Configure the destination AAPLAssetViewController.
+        if let assetViewController = segue.destinationViewController as? AssetViewController {
+            let indexPath = self.collectionView!.indexPathForCell(sender as! UICollectionViewCell)!
+            assetViewController.asset = self.assetsFetchResults![indexPath.item] as? PHAsset
+            assetViewController.assetCollection = self.assetCollection
+        }
     }
 
 }
